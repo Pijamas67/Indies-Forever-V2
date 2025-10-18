@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url(../fonts/Pixelmax-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Pixel';
+    color: white;
+}
+
+#main {
+    background-image: url(../img/Fondo.webp);
+}
+
+/* Ocultar todas las secciones excepto la activa */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Estilos para las tarjetas de proyectos */
+.project-card {
+    margin-bottom: 20px;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para el formulario de contacto */
+.form-control:focus {
+    border-color: #6c757d;
+    box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25);
+}
+
+/* Estilos para el botón de búsqueda */
+#search-form {
+    min-width: 250px;
+}
+
+/* Estilos para el footer */
+footer {
+    margin-top: auto;
+}
+
+/* Estilos para la navegación activa */
+.nav-link.active {
+    font-weight: bold;
+    color: #fff !important;
+}
+
+/* Responsividad adicional */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+    
+    #search-form {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

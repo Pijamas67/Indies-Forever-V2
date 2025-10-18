@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indies Forever</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#inicio" data-section="inicio">🎮 Indies Forever</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio" data-section="inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos" data-section="proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto" data-section="contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#registro" data-section="registro">Registro</a></li>
+                </ul>
+                <form class="d-flex ms-3" id="search-form">
+                    <input class="form-control me-2" type="search" placeholder="Buscar proyectos..." id="search-input">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container-fluid flex-grow-1">
+        <div class="row">
+
+            <!-- SIDEBAR -->
+            <aside class="col-12 col-md-2 bg-secondary p-3 d-flex flex-column">
+                <h5 class="text-white mb-3">Navegación</h5>
+                <a href="#inicio" class="btn btn-light mb-2 w-100" data-section="inicio">🏠 Inicio</a>
+                <a href="#proyectos" class="btn btn-outline-light mb-2 w-100" data-section="proyectos">📂 Proyectos</a>
+                <a href="#contacto" class="btn btn-outline-light mb-2 w-100" data-section="contacto">✉️ Contacto</a>
+                <a href="#registro" class="btn btn-outline-light w-100" data-section="registro">📝 Registro</a>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-12 col-md-10 p-4" id="main">
+
+                <!-- Sección Inicio -->
+                <section id="inicio" class="content-section active">
+                    <div class="container py-5 flex-grow-1">
+                        <h1 class="text-center mb-5">Bienvenidos a Indies Forever</h1>
+                        <div class="p-3 mb-4 bg-dark bg-opacity-25 text-white rounded shadow">
+                            <h3>Nuestra Historia</h3>
+                            <p>Indies Forever nació de la pasión compartida por los videojuegos independientes. Como amantes de los juegos, notamos que muchas joyas indie pasaban desapercibidas frente a los títulos AAA. En 2020, un grupo de desarrolladores y entusiastas nos unimos con la misión de dar visibilidad a estos proyectos creativos.</p>
+                            
+                            <h3>¿Qué Ofrecemos?</h3>
+                            <p>Somos una plataforma dedicada a promover y apoyar el desarrollo de videojuegos independientes. Ofrecemos:</p>
+                            <ul>
+                                <li>Exposición para desarrolladores indie</li>
+                                <li>Eventos y sorteos exclusivos</li>
+                                <li>Una comunidad activa de jugadores</li>
+                                <li>Recursos y asesoramiento para desarrolladores</li>
+                            </ul>
+                            
+                            <p>Los juegos indies son aquellos que no son hechos por grandes empresas ni con mucho presupuesto, pero aún así llevan revolucionando la industria de los videojuegos desde siempre gracias a lo originales y divertidos que son, además al ser hechos por un grupo pequeño de personas (generalmente) son más íntimos con el jugador y pueden llegar a ser muy profundos.</p>
+                            <p>Esta página recoge algunos de los mejores indies de la historia y ofrece promociones y descuentos mediante sorteos o reuniones en la página de eventos a los usuarios registrados.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Proyectos -->
+                <section id="proyectos" class="content-section">
+                    <div class="container py-5 flex-grow-1">
+                        <h1 class="text-center mb-5">Nuestros Proyectos Destacados</h1>
+                        
+                        <div class="row g-4 mb-2" id="projects-container">
+                            <!-- Las tarjetas se cargarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Contacto -->
+                <section id="contacto" class="content-section">
+                    <div class="container py-5 flex-grow-1">
+                        <h1 class="text-center mb-5">✉️ ¡Contacta con nosotros!</h1>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 col-lg-7">
+                                    <div class="p-4 bg-light rounded shadow">
+                                        <form id="contact-form">
+                                            <div class="mb-3">
+                                                <label for="name" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Tu nombre completo" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="email" placeholder="ejemplo@mail.com" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="subject" class="form-label">Asunto</label>
+                                                <input type="text" class="form-control" id="subject" placeholder="Motivo de tu mensaje" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="message" class="form-label">Mensaje</label>
+                                                <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Registro -->
+                <section id="registro" class="content-section">
+                    <div class="container py-5 flex-grow-1">
+                        <h1 class="text-center mb-5">¡Inicia sesión o Regístrate!</h1>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="p-4 bg-light rounded shadow">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="username" class="form-label">Nombre de usuario</label>
+                                                <input type="text" class="form-control" id="username" placeholder="Tu nombre">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="email" placeholder="ejemplo@mail.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="password" placeholder="••••••••">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="confirm" class="form-label">Repetir contraseña</label>
+                                                <input type="password" class="form-control" id="confirm" placeholder="••••••••">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="birthdate" class="form-label">Fecha de nacimiento</label>
+                                                <input type="date" class="form-control" id="birthdate">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Género</label><br>
+                                                <input type="radio" name="gender" value="m"> Masculino
+                                                <input type="radio" name="gender" value="f"> Femenino
+                                                <input type="radio" name="gender" value="o"> Otro
+                                            </div>
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                                            </div>
+                                        </form>
+                                        <p class="mt-3 text-center small">¿Ya tienes cuenta? <a href="#">Inicia sesión</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        © 2025 Indies Forever - Desarrollado por Adrián García - Todos los derechos reservados
+    </footer>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">¡Mensaje Enviado!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¡Gracias por contactarnos! Te responderemos lo antes posible.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
